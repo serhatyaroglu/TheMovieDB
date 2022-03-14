@@ -16,6 +16,15 @@
 		79986C2727DC9BAC00B24BE1 /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C2627DC9BAC00B24BE1 /* TheMovieDBTests.swift */; };
 		79986C3127DC9BAC00B24BE1 /* TheMovieDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C3027DC9BAC00B24BE1 /* TheMovieDBUITests.swift */; };
 		79986C3327DC9BAC00B24BE1 /* TheMovieDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C3227DC9BAC00B24BE1 /* TheMovieDBUITestsLaunchTests.swift */; };
+		79986C4827DC9DEE00B24BE1 /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C4727DC9DEE00B24BE1 /* HomeProtocol.swift */; };
+		79986C4A27DC9DF700B24BE1 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C4927DC9DF700B24BE1 /* HomeInteractor.swift */; };
+		79986C4C27DC9E0000B24BE1 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C4B27DC9E0000B24BE1 /* HomePresenter.swift */; };
+		79986C4F27DC9E1100B24BE1 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C4E27DC9E1100B24BE1 /* HomeRouter.swift */; };
+		79986C5627DC9E6700B24BE1 /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C5527DC9E6700B24BE1 /* DetailProtocol.swift */; };
+		79986C5827DC9E7900B24BE1 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C5727DC9E7900B24BE1 /* DetailInteractor.swift */; };
+		79986C5A27DC9E8300B24BE1 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C5927DC9E8300B24BE1 /* DetailRouter.swift */; };
+		79986C5C27DC9E8A00B24BE1 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C5B27DC9E8A00B24BE1 /* DetailPresenter.swift */; };
+		79986C5E27DC9EC100B24BE1 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79986C5D27DC9EC100B24BE1 /* MovieResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		79986C2C27DC9BAC00B24BE1 /* TheMovieDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79986C3027DC9BAC00B24BE1 /* TheMovieDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITests.swift; sourceTree = "<group>"; };
 		79986C3227DC9BAC00B24BE1 /* TheMovieDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		79986C4727DC9DEE00B24BE1 /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		79986C4927DC9DF700B24BE1 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		79986C4B27DC9E0000B24BE1 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		79986C4E27DC9E1100B24BE1 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		79986C5527DC9E6700B24BE1 /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
+		79986C5727DC9E7900B24BE1 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		79986C5927DC9E8300B24BE1 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		79986C5B27DC9E8A00B24BE1 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		79986C5D27DC9EC100B24BE1 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +117,11 @@
 		79986C0E27DC9BAB00B24BE1 /* TheMovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				79986C4127DC9D6300B24BE1 /* Network */,
+				79986C4027DC9D5A00B24BE1 /* HomeVC */,
+				79986C3F27DC9D2F00B24BE1 /* DetailVC */,
 				79986C0F27DC9BAB00B24BE1 /* AppDelegate.swift */,
 				79986C1127DC9BAB00B24BE1 /* SceneDelegate.swift */,
-				79986C1327DC9BAB00B24BE1 /* ViewController.swift */,
 				79986C1527DC9BAB00B24BE1 /* Main.storyboard */,
 				79986C1827DC9BAC00B24BE1 /* Assets.xcassets */,
 				79986C1A27DC9BAC00B24BE1 /* LaunchScreen.storyboard */,
@@ -125,6 +145,117 @@
 				79986C3227DC9BAC00B24BE1 /* TheMovieDBUITestsLaunchTests.swift */,
 			);
 			path = TheMovieDBUITests;
+			sourceTree = "<group>";
+		};
+		79986C3F27DC9D2F00B24BE1 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				79986C5427DC9E5500B24BE1 /* Presenter */,
+				79986C5327DC9E5000B24BE1 /* Router */,
+				79986C5227DC9E4A00B24BE1 /* Interactor */,
+				79986C5027DC9E3E00B24BE1 /* Protocol */,
+				79986C5127DC9E4600B24BE1 /* View */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
+		79986C4027DC9D5A00B24BE1 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				79986C4327DC9DA400B24BE1 /* View */,
+				79986C4627DC9DD200B24BE1 /* Protocol */,
+				79986C4527DC9DAD00B24BE1 /* Interactor */,
+				79986C4427DC9DA800B24BE1 /* Presenter */,
+				79986C4227DC9D9C00B24BE1 /* Router */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		79986C4127DC9D6300B24BE1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				79986C5D27DC9EC100B24BE1 /* MovieResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		79986C4227DC9D9C00B24BE1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				79986C4E27DC9E1100B24BE1 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		79986C4327DC9DA400B24BE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79986C1327DC9BAB00B24BE1 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79986C4427DC9DA800B24BE1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				79986C4B27DC9E0000B24BE1 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		79986C4527DC9DAD00B24BE1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				79986C4927DC9DF700B24BE1 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		79986C4627DC9DD200B24BE1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				79986C4727DC9DEE00B24BE1 /* HomeProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		79986C5027DC9E3E00B24BE1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				79986C5527DC9E6700B24BE1 /* DetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		79986C5127DC9E4600B24BE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79986C5227DC9E4A00B24BE1 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				79986C5727DC9E7900B24BE1 /* DetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		79986C5327DC9E5000B24BE1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				79986C5927DC9E8300B24BE1 /* DetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		79986C5427DC9E5500B24BE1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				79986C5B27DC9E8A00B24BE1 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +389,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79986C4827DC9DEE00B24BE1 /* HomeProtocol.swift in Sources */,
 				79986C1427DC9BAB00B24BE1 /* ViewController.swift in Sources */,
+				79986C4F27DC9E1100B24BE1 /* HomeRouter.swift in Sources */,
+				79986C5827DC9E7900B24BE1 /* DetailInteractor.swift in Sources */,
+				79986C5C27DC9E8A00B24BE1 /* DetailPresenter.swift in Sources */,
 				79986C1027DC9BAB00B24BE1 /* AppDelegate.swift in Sources */,
+				79986C5A27DC9E8300B24BE1 /* DetailRouter.swift in Sources */,
+				79986C5627DC9E6700B24BE1 /* DetailProtocol.swift in Sources */,
+				79986C4C27DC9E0000B24BE1 /* HomePresenter.swift in Sources */,
+				79986C5E27DC9EC100B24BE1 /* MovieResponse.swift in Sources */,
+				79986C4A27DC9DF700B24BE1 /* HomeInteractor.swift in Sources */,
 				79986C1227DC9BAB00B24BE1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
