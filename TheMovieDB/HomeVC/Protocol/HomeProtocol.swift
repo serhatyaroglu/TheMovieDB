@@ -9,15 +9,25 @@ import Foundation
 
 protocol ViewToPresenterHomeProtocol {
     var HomeInteractor:PresenterToInteractorHomeProtocol? {get set}
-    var HomeView:PresenterToViewHomeProtocol? {get set}    func InstallMovies()
+    var HomeView:PresenterToViewHomeProtocol? {get set}
+    
+    func MovieAllDownload(searchWords:String)
 }
+
+
 protocol PresenterToInteractorHomeProtocol {
     var HomePresenter:InteractorToPresenterHomeProtocol? {get set}
-    func GetMovie()
+    
+    func MovieAllPhotoGet(searchWords:String)
 }
 protocol InteractorToPresenterHomeProtocol {
+    func presenterToSendData(searchList:Array<Result>)
 }
+
 protocol PresenterToViewHomeProtocol {
+    func vieweToSendData(searchList:Array<Result>)
 }
+
 protocol PresenterToRouterHomeProtocol {
+    static func createModule(ref:HomeVC)
 }

@@ -7,14 +7,11 @@
 
 import Foundation
 class HomeRouter : PresenterToRouterHomeProtocol {
-    static func createModule(ref: ViewController) {
+    static func createModule(ref: HomeVC) {
         let presenter : ViewToPresenterHomeProtocol & InteractorToPresenterHomeProtocol = HomePresenter()
-        //View controller için
-       // ref.HomePresenterNesnesi = presenter
-        //Presenter için
-      //  ref.HomePresenterNesnesi?.HomeInteractor = HomeInteractor()
-       // ref.HomePresenterNesnesi?.HomeView = ref
-        //Interactor için
-            // ref.HomePresenterNesnesi?.HomeInteractor?.HomePresenter = presenter
+        ref.HomePresenterNesnesi = presenter
+        ref.HomePresenterNesnesi?.HomeInteractor = HomeInteractor()
+        ref.HomePresenterNesnesi?.HomeView = ref 
+             ref.HomePresenterNesnesi?.HomeInteractor?.HomePresenter = presenter
     }
 }

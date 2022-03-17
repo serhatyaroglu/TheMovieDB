@@ -1,14 +1,23 @@
 //  HomePresenter.swift
 //  TheMovieDB
 //  Created by serhat yaroglu on 12.03.2022.
+
 import Foundation
+
 class HomePresenter : ViewToPresenterHomeProtocol {
     var HomeInteractor: PresenterToInteractorHomeProtocol?
+    
     var HomeView: PresenterToViewHomeProtocol?
-    func InstallMovies() {
-        HomeInteractor?.GetMovie()
+    func MovieAllDownload(searchWords:String) {
+        HomeInteractor?.MovieAllPhotoGet(searchWords:searchWords)
+
     }
+    
 }
 extension HomePresenter : InteractorToPresenterHomeProtocol {
- //   func presenterSendData(listMovie: Array<>){homeView.sendDataView(listMovie:listMovie)}
+    func presenterToSendData(searchList: Array<Result>) {
+        HomeView?.vieweToSendData(searchList: searchList)
+    }
+    
+   
 }
