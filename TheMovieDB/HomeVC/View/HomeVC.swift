@@ -21,6 +21,15 @@ class HomeVC: UIViewController {
         tableView.dataSource = self
         SearchBar.delegate = self
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Todetail"{
+            let movie = sender as? Result
+            let goToVC = segue.destination as! DetailVC
+            goToVC.movieData =  movie
+            
+            
+        }
+    }
    
 }
 extension HomeVC : PresenterToViewHomeProtocol {
@@ -49,6 +58,10 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
         //tek label ile yap
         cell.movieNameLabel.text = "\(search.originalTitle!) - \(search.releaseDate!)"
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieDetail = searchList[indexPath.row]
+        performSegue(withIdentifier: "Todetail", sender: movieDetail)
     }
     
     

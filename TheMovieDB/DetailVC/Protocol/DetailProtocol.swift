@@ -6,3 +6,12 @@
 //
 
 import Foundation
+protocol ViewToPresenterDetailProtocol {
+    var DetailInteractor:PresenterToInteractorDetailProtocol? {get set}
+}
+
+protocol PresenterToInteractorDetailProtocol {
+}
+protocol PresenterToRouterDetailProtocol {
+    static func createModule(ref:DetailVC)
+}

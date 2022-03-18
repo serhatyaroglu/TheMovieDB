@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class DetailRouter : PresenterToRouterDetailProtocol {
+    static func createModule(ref: DetailVC) {
+    }
+}
